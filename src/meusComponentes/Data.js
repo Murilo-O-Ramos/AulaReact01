@@ -14,9 +14,9 @@ export default class Data extends Component{
         const dataAtual = new Date();
         let timeZoneFromDB = parseInt(timeZone); 
         let diferencaTempo = timeZoneFromDB * 60 + dataAtual.getTimezoneOffset();
-        let milisecundos = parseInt(dataAtual.getTime() + diferencaTempo * 60 * 1000)
-        console.log(milisecundos)
-        return Date(milisecundos);
+        let milisecundos = parseInt(dataAtual.getTime() + (diferencaTempo * 60 * 1000));
+        const data = new Date(milisecundos);
+        return data
     }
 
     //fase de montagem
