@@ -18,7 +18,6 @@ export default class Data extends Component{
         console.log(milisecundos)
         return Date(milisecundos);
     }
-
     //fase de montagem
     componentDidMount(){
         console.log("O componente foi montado.");
@@ -43,4 +42,5 @@ export default class Data extends Component{
             <h1>{ this.props.texto || ""}{this.state.dataAtual}</h1>
         )
     }
-}
+    
+} 
